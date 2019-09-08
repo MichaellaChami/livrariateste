@@ -1,0 +1,276 @@
+<html>
+<head>
+<meta charset="UTF-8"> <!--Codificação para aparecer acentos,etc -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livraria Virtual</title><!--Título-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/Estilos.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/Estilos0.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/simpleCart.js"></script>
+<!--Atribuindo os css's e js's usados.
+Simplecart aqui é usado no carrinho de compras-->
+<script type="text/javascript">
+	simpleCart.email = "uninorte@exemplo.com";
+	simpleCart.checkoutTo = PayPal;
+</script>
+<!--Definindo o email de pagamento e o método no simpleCart.
+É apenas exemplo, por isso não irá funcionar porque o email ali não existe
+E precisa definir a moeda como USD, EUR, BRL, etc. -->
+</head>
+
+<body>
+  <div class="header">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+				<!-- Container, do bootstrap. Para alinhar e deixar o design responsivo.
+				 Navbar-inverse deixa a cor escura.
+				-->
+        <form class="navbar-form navbar-right" action="#">
+					<!-- Alinhando o campo de busca no lado direito -->
+          <div class="form-group">
+						<!-- Bootstrap. Estrutura para o campo de busca -->
+            <input type="text" class="form-control" placeholder="Buscar" name="search">
+          </div>
+          <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+					<!--Deixando o conteudo na direita-->
+          <!-- carrinho e esvaziar usando simpleCart-->
+          <span class="simpleCart_total navbar-brand"></span>
+					<!-- simpleCart_total = Mostrando o valor final.
+				Navbar-brand usado para ajustar o conteudo no design-->
+					<a class="navbar-brand"><img src="images/cart.png" alt="carrinho"/></a>
+					<!-- Colocando a img do carrinho -->
+					<a href="javascript:;" class="simpleCart_empty navbar-brand">Esvaziar</a>
+					<!-- simpleCart_empty é a função que esvazia.-->
+					<!--Modal-->
+      <a href="#myModal" role="button" data-toggle="modal" class="navbar-brand" data-target="#myModal">Checkout</a>
+			<!-- Checkout feito non Modal
+					data-target pra abrir o Modal
+					vi o tutorial dele aqui:
+					https://www.w3schools.com/bootstrap/bootstrap_modal.asp
+				-->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center"><span class="simpleCart_quantity"></span> items na sua cesta</h3>
+					<!--simpleCart_quantity mostra os itens no carrinho-->
+        </div>
+        <div class="modal-body text-center">
+        <strong>Items: </strong><span class="simpleCart_quantity"></span>
+				<!--simpleCart_quantity mostra a quantidade-->
+				<strong>| Total: </strong><span class="simpleCart_finalTotal"></span>
+				<!--simpleCart_finalTotal mostra o valor todo-->
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default"><a href="javascript:;" class="simpleCart_checkout">Checkout</a></button>
+				<!--Página de checkout-->
+        </div>
+      </div>
+
+    </div>
+	</div>
+					<!--Fim do modal-->
+          <li><a href="login.html">Minha Conta</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<!--Fazendo outro header, com a cor clara-->
+      <div class="container-fluid">
+				<!--outro container-->
+        <div class="navbar-header">
+          <a class="navbar-brand text-danger" href="index.html">Livraria Virtual</a>
+        </div>
+				<!--text-danger = bootstrap. Deixa a cor do texto vermelho-->
+        <ul class="nav navbar-nav navbar-right">
+					<!--Conteudo na direita-->
+          <li class="active"><a class="text-danger" href="index.html">Home</a></li>
+					<!--"active" é pra mostrar qual a página selecionada
+				Não tem necessidade de uso, já que eu deixei tudo claro
+			mas se trocar para navbar navbar-inverse como no primeiro container, vai ver o resultado-->
+          <li><a class="text-danger" href="promo.html">Promoções</a></li>
+          <li><a class="text-danger" href="acc.html">Acessórios</a></li>
+          <li><a class="text-danger" href="atendimento.html">Atendimento</a></li>
+        </ul>
+      </div>
+    </nav>
+<!--banner imagem e texto-->
+<div class="banner">
+	<!--o banner ta no css-->
+<div class="container">
+	<!--outro container-->
+<section class="rw-wrapper">
+	<!--efeito das letras no css-->
+				<h1 class="rw-sentence">
+					<span>Livraria virtual</span>
+					<div class="rw-words rw-words-1">
+						<span>Trazendo conteúdos</span>
+						<span>Para todos os públicos</span>
+            <span>Desde 2013.</span>
+						<!--adicione mais <span> que irá aparecer também c:-->
+					</div>
+					<div class="rw-words rw-words-2">
+						<span>Todos os livros</span>
+						<span>Com 30% OFF</span>
+						<span>Até final do mês.</span>
+						<span>Aproveite!</span>
+					</div>
+				</h1>
+			</section>
+			</div>
+</div>
+  		</div>
+<!--indicações-->
+<div class="container">
+<h1>Procurando por indicações?</h1>
+<h4>Separamos para você uma seleção exclusiva de itens mais avaliados pelos nossos clientes. Na compra de qualquer um dos livros abaixo, concorra a um brinde exclusivo de nossa loja!</h4>
+<label class="line"></label>
+<!--produtos-->
+<div class="mid-popular text-center">
+	<!--mid-popular ta no css-->
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<!--pra qualquer item ser add no carrinho tem que estar dentro do container simpleCart_shelfItem-->
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="pride.jpg" class="img-responsive" alt>
+				<!--mostrando a img e deixando responsiva-->
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<!--css...-->
+						<span>Orgulho e Preconceito</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+							<!--Adiciona o item no carrinho-->
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$56.90</label>
+						<em class="item_price">$26.90</em>
+						<!--Preço do produto-->
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--VAI SER TUDO A MESMA COISA-->
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="pequeno_principe.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Pequeno Príncipe</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$48.60</label>
+						<em class="item_price">$18.60</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="got.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Game of Thrones</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$89.90</label>
+						<em class="item_price">$59.90</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="box_comedia.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Box A Divina Comédia</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$85.90</label>
+						<em class="item_price">$55.90</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!--fim dos produtos-->
+<!--Footer com bootstrap-->
+<div class="footer">
+	<div class="footer-middle">
+		<div class="container">
+			<div class="col-sm-3 footer-middle-in">
+				<!--collum tamanho médio, bootstrap-->
+				<h6>Acesso rápido</h6>
+				<ul class=" in">
+					<li><a href="index.html">Home</li></a>
+					<li><a href="promo.html">Promoções</li></a>
+					<li><a href="acc.html">Acessórios</li></a>
+					<li><a href="atendimento.html">Atendimento</li></a>
+				</ul>
+			</div>
+			<div class="col-sm-6 footer-middle-in">
+				<!--Tamanho maior pq fica no meio-->
+				<h6 class="text-center">Novidades</h6>
+				<p>A partir do mês de novembro estaremos disponibilizando novo kits, eventos e promoções para a saga Harry Potter! Não perca esse passaporte para Hogwarts!</p>
+			</div>
+			<div class="col-sm-3 footer-middle-in">
+				<!--médio de novo-->
+				<h6 class="text-center">Em breve:</h6>
+				<img src="livrodasvarinhas.jpg" alt>
+				<img src="srdosaneis.jpg" alt>
+			</div>
+	</div>
+</div>
+<!--footer de baixo-->
+<div class="footer-bottom">
+	<div class="container">
+		<p class="footer-class text-center">
+			© 2018, Livraria Virtual. Todos os direitos reservados. | Design por Michaella Chami.
+			<!--e fim ='w'= -->
+	</div>
+</div>
+</body>
+</html>

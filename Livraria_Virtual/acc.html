@@ -1,0 +1,302 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livraria Virtual</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/Estilos.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/Estilos0.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/simpleCart.js"></script>
+<script type="text/javascript">
+	simpleCart.email = "uninorte@exemplo.com";
+	simpleCart.checkoutTo = PayPal;
+</script>
+</head>
+
+<body>
+  <div class="header">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <form class="navbar-form navbar-right" action="#">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Buscar" name="search">
+          </div>
+          <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- carrinho e esvaziar usando simpleCart-->
+          <span class="simpleCart_total navbar-brand"></span>
+					<a class="navbar-brand"><img src="images/cart.png" alt="carrinho"/></a>
+					<a href="javascript:;" class="simpleCart_empty navbar-brand">Esvaziar</a>
+					<!--Modal, etc-->
+      <a href="#myModal" role="button" data-toggle="modal" class="navbar-brand" data-target="#myModal">Checkout</a>
+			<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="text-center"><span class="simpleCart_quantity"></span> items na sua cesta</h3>
+        </div>
+        <div class="modal-body text-center">
+        <strong>Items: </strong><span class="simpleCart_quantity"></span>
+				<strong>| Total: </strong><span class="simpleCart_finalTotal"></span>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default"><a href="javascript:;" class="simpleCart_checkout">Checkout</a></button>
+        </div>
+      </div>
+
+    </div>
+	</div>
+					<!--Fim, etc-->
+          <li><a href="login.html">Minha Conta</a></li>
+        </ul>
+      </div>
+    </nav>
+<!-- Fim do carrinho-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand text-danger" href="index.html">Livraria Virtual</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="text-danger" href="index.html">Home</a></li>
+          <li class="active"><a class="text-danger" href="promo.html">Promoções</a></li>
+          <li><a class="text-danger" href="acc.html">Acessórios</a></li>
+          <li><a class="text-danger" href="atendimento.html">Atendimento</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<!--acessórios-->
+<!--produtos-->
+<div class="container">
+<div class="mid-popular text-center">
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="adesivo.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Adesivo para escadas</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$52.90</label>
+						<em class="item_price">$32.90</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="almofada.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Almofada Alice no país das maravilhas</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$165.90</label>
+						<em class="item_price">$129.90</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="anel.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Anel de leitura</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$32.90</label>
+						<em class="item_price">$17.90</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="kindle.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Kindle Paperwhite</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$560.99</label>
+						<em class="item_price">$399.90</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="marcador.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Marcado de livros mãozinhas</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$32.60</label>
+						<em class="item_price">$25.40</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="col-md-3 item-grid simpleCart_shelfItem">
+		<div class="mid-pop">
+			<div class="pro-img">
+				<img src="prateleirasuporte.jpg" class="img-responsive" alt>
+			</div>
+			<div class="mid-1">
+				<div>
+					<div class="text-top">
+						<span>Prateleira com suporte invisível</span>
+					</div>
+						<div class="img item_add">
+							<a href="#"><img src="images/ca.png" alt></a>
+						</div>
+				</div>
+				<div class="mid-2">
+					<p>
+						<label>$22.00</label>
+						<em class="item_price">$16.90</em>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="col-md-3 item-grid simpleCart_shelfItem">
+    <div class="mid-pop">
+      <div class="pro-img">
+        <img src="luminaria.jpg" class="img-responsive" alt>
+      </div>
+      <div class="mid-1">
+        <div>
+          <div class="text-top">
+            <span>Luminária Abajur formato livro</span>
+          </div>
+            <div class="img item_add">
+              <a href="#"><img src="images/ca.png" alt></a>
+            </div>
+        </div>
+        <div class="mid-2">
+          <p>
+            <label>$210.60</label>
+            <em class="item_price">$186.90</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 item-grid simpleCart_shelfItem">
+    <div class="mid-pop">
+      <div class="pro-img">
+        <img src="suporte.jpg" class="img-responsive" alt>
+      </div>
+      <div class="mid-1">
+        <div>
+          <div class="text-top">
+            <span>Suporte apoio à leitura (Grande)</span>
+          </div>
+            <div class="img item_add">
+              <a href="#"><img src="images/ca.png" alt></a>
+            </div>
+        </div>
+        <div class="mid-2">
+          <p>
+            <label>$210.60</label>
+            <em class="item_price">$124.90</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---->
+</div>
+</div>
+</br>
+<!--fim dos acessórios-->
+<!--Footer-->
+
+<div class="footer">
+	<div class="footer-middle">
+		<div class="container">
+			<div class="col-sm-3 footer-middle-in">
+				<h6>Acesso rápido</h6>
+				<ul class=" in">
+					<li><a href="index.html">Home</li></a>
+					<li><a href="promo.html">Promoções</li></a>
+					<li><a href="acc.html">Acessórios</li></a>
+					<li><a href="atendimento.html">Atendimento</li></a>
+				</ul>
+			</div>
+			<div class="col-sm-6 footer-middle-in">
+				<h6 class="text-center">Novidades</h6>
+				<p>A partir do mês de novembro estaremos disponibilizando novo kits, eventos e promoções para a saga Harry Potter! Não perca esse passaporte para Hogwarts!</p>
+			</div>
+			<div class="col-sm-3 footer-middle-in">
+				<h6 class="text-center">Em breve:</h6>
+				<img src="livrodasvarinhas.jpg" alt>
+				<img src="srdosaneis.jpg" alt>
+			</div>
+	</div>
+</div>
+<!--footer de baixo-->
+<div class="footer-bottom">
+	<div class="container">
+		<p class="footer-class text-center">
+			© 2018, Livraria Virtual. Todos os direitos reservados. | Design por Michaella Chami.
+	</div>
+</div>
+</body>
+</html>
